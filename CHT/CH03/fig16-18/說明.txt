@@ -1,0 +1,12 @@
+1、人臉庫建構
+進入 \database\face_add，新增資料夾，將白色背景、人臉圖形放進去，一般7幅。
+
+2、人臉遮擋測試
+需要針對人臉區域進行驗證，傳回的是重構的人臉。
+
+3、函數修改
+主函數Main_Process
+資料庫起始化Init_Db
+資料預先處理Data_PreProcess
+L1方法Reconstruct_L1
+L2方法Reconstruct_L2

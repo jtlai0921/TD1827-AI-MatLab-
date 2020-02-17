@@ -1,0 +1,23 @@
+clc;
+clear all;
+close all;
+x=rgb2gray(imread('1.jpg'));
+figure,
+m=3;n=2;
+subplot(2,2,1);
+y = upsample(x,m); 
+imshow(y);
+title('upsample(x,3)');        
+subplot(2,2,2);
+y = upsample(x,m,n); 
+imshow(y);
+title('upsample(x,3,2)');
+m=4;n=2;
+subplot(2,2,3);
+y = upsample(x,m); 
+imshow(y);
+title('upsample(x,4)');         
+subplot(2,2,4);
+y = upsample(x,m,n); 
+imshow(y);
+title('upsample(x,4,2)');

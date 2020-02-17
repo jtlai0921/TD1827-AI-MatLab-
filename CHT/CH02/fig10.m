@@ -1,0 +1,21 @@
+clc; clear all;
+IM = imread('3.jpg'); BW=im2bw(IM);
+BW1 = bwulterode(BW,'euclidean',8);
+BW2 = bwulterode(BW,'cityblock',8);
+BW3 = bwulterode(BW,'chessboard',8);
+BW4 = bwulterode(BW,'quasi-euclidean',8);
+BW5 = bwulterode(BW,'euclidean',4);
+BW6 = bwulterode(BW,'cityblock',4);
+BW7 = bwulterode(BW,'chessboard',4);
+BW8 = bwulterode(BW,'quasi-euclidean',4);
+BW9 = IM;
+figure
+subplot(3,3,1),imshow(BW1);title('euclidean, conn=8');
+subplot(3,3,2),imshow(BW2);title('cityblock, conn=8');
+subplot(3,3,3),imshow(BW3);title('chessboard, conn=8');
+subplot(3,3,4),imshow(BW4);title('quasi-euclidean, conn=8');
+subplot(3,3,5),imshow(BW5);title('euclidean, conn=4');
+subplot(3,3,6),imshow(BW6);title('cityblock, conn=4');
+subplot(3,3,7),imshow(BW7);title('chessboard, conn=4');
+subplot(3,3,8),imshow(BW8);title('quasi-euclidean, conn=4');
+subplot(3,3,9),imshow(BW9);title('original');
